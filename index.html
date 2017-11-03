@@ -9,15 +9,15 @@ Tic Tac Toe
 function variables(){
     t = 1;
     change = 1;    
-    empty1 = -1;
-    empty2 = -1;
-    empty3 = -1;
-    empty4 = -1;
-    empty5 = -1;
-    empty6 = -1;
-    empty7 = -1;
-    empty8 = -1;
-    empty9 = -1;
+    empty_1 = -1;
+    empty_2 = -1;
+    empty_3 = -1;
+    empty_4 = -1;
+    empty_5 = -1;
+    empty_6 = -1;
+    empty_7 = -1;
+    empty_8 = -1;
+    empty_9 = -1;
 	b1 = 0;
 	b2 = 0;
 	b3 = 0;
@@ -29,29 +29,29 @@ function variables(){
 	b9 = 0;
 	
     return;
-    whogoesnow = "player 1"
+    who_goes_now = "player 1"
 }
 
 function win(){
-  if   (empty1==empty2 && empty2==empty3 && empty3==0 ||
-empty4==empty5 && empty5==empty6 && empty6==0 ||    
-        empty7==empty8 && empty8==empty9 && empty9==0 ||
-        empty1==empty4 && empty4==empty7 && empty7==0 ||
-        empty2==empty5 && empty5==empty8 && empty8==0 ||
-        empty3==empty6 && empty6==empty9 && empty9==0 ||
-        empty1==empty5 && empty5==empty9 && empty9==0 ||
-        empty3==empty5 && empty5==empty7 && empty7==0 ){
+  if   (empty_1==empty_2 && empty_2==empty_3 && empty_3==0 ||
+empty_4==empty_5 && empty_5==empty_6 && empty_6==0 ||    
+        empty_7==empty_8 && empty_8==empty_9 && empty_9==0 ||
+        empty_1==empty_4 && empty_4==empty_7 && empty_7==0 ||
+        empty_2==empty_5 && empty_5==empty_8 && empty_8==0 ||
+        empty_3==empty_6 && empty_6==empty_9 && empty_9==0 ||
+        empty_1==empty_5 && empty_5==empty_9 && empty_9==0 ||
+        empty_3==empty_5 && empty_5==empty_7 && empty_7==0 ){
         alert ("player2 wins,congratulation!!!");          
         history.go(0)  
   }
-  if   (empty1==empty2 && empty2==empty3 && empty3==1 ||
-empty4==empty5 && empty5==empty6 && empty6==1 ||    
-        empty7==empty8 && empty8==empty9 && empty9==1 ||
-        empty1==empty4 && empty4==empty7 && empty7==1 ||
-        empty2==empty5 && empty5==empty8 && empty8==1 ||
-        empty3==empty6 && empty6==empty9 && empty9==1 ||
-        empty1==empty5 && empty5==empty9 && empty9==1 ||
-        empty3==empty5 && empty5==empty7 && empty7==1 ){
+  if   (empty_1==empty_2 && empty_2==empty_3 && empty_3==1 ||
+empty_4==empty_5 && empty_5==empty_6 && empty_6==1 ||    
+        empty_7==empty_8 && empty_8==empty_9 && empty_9==1 ||
+        empty_1==empty_4 && empty_4==empty_7 && empty_7==1 ||
+        empty_2==empty_5 && empty_5==empty_8 && empty_8==1 ||
+        empty_3==empty_6 && empty_6==empty_9 && empty_9==1 ||
+        empty_1==empty_5 && empty_5==empty_9 && empty_9==1 ||
+        empty_3==empty_5 && empty_5==empty_7 && empty_7==1 ){
         alert ("player1 wins,congratulation!!!");
 	history.go(0)
   }
@@ -61,11 +61,11 @@ function turnchange(t){
   if (change == 1)  {
     if (t == 0){
         t = 1;
-        whogoesnow = "player " + 1
+        who_goes_now = "player " + 1
     }
     else {
         t = 0;
-	whogoesnow = "player " + 2
+	who_goes_now = "player " + 2
     }
     
   }
@@ -78,23 +78,23 @@ function turnchange(t){
 
 function changing(clicked){
 if (clicked == 1){            
-   spot = empty1 ;}
+   spot = empty_1 ;}
 if (clicked == 2){
-   spot = empty2 ;}
+   spot = empty_2 ;}
 if (clicked == 3){
-   spot = empty3 ;}
+   spot = empty_3 ;}
 if (clicked == 4){
-   spot = empty4 ;}
+   spot = empty_4 ;}
 if (clicked == 5){
-   spot = empty5 ;}
+   spot = empty_5 ;}
 if (clicked == 6){
-   spot = empty6 ;}
+   spot = empty_6 ;}
 if (clicked == 7){
-   spot = empty7 ;}
+   spot = empty_7 ;}
 if (clicked == 8){
-   spot = empty8 ;}
+   spot = empty_8 ;}
 if (clicked == 9){
-   spot = empty9 ;}
+   spot = empty_9 ;}
 
 if (spot == -1){
    if (t == 0){
@@ -106,23 +106,23 @@ if (spot == -1){
       spot = 1	     
    }                              
    if (clicked == 1){            
-      empty1 = spot;}
+      empty_1 = spot;}
    if (clicked == 2){
-      empty2 = spot ;}
+      empty_2 = spot ;}
    if (clicked == 3){
-      empty3 = spot ;}
+      empty_3 = spot ;}
    if (clicked == 4){
-      empty4 = spot ;}
+      empty_4 = spot ;}
    if (clicked == 5){
-      empty5 = spot ;}
+      empty_5 = spot ;}
    if (clicked == 6){
-      empty6 = spot ;}
+      empty_6 = spot ;}
    if (clicked == 7){
-      empty7 = spot ;}
+      empty_7 = spot ;}
    if (clicked == 8){
-      empty8 = spot ;}
+      empty_8 = spot ;}
    if (clicked == 9){
-      empty9 = spot ;}
+      empty_9 = spot ;}
 } 
 else {
    if (spot == 0){
@@ -142,10 +142,10 @@ function changeb1(form){
     changing(clicked) ;     
     t = turnchange(t) ;  
     form.b1.value = xo; 
-    form.whoseturn.value = whogoesnow 
+    form.whose_turn.value = who_goes_now 
 	b1 = 1;
     win();
-drawCheck();	
+draw_check();	
    return;
 }
 function changeb2(form){	
@@ -154,10 +154,10 @@ function changeb2(form){
     changing(clicked) ;   
     form.b2.value = xo;    
     t = turnchange(t) ;
-    form.whoseturn.value = whogoesnow
+    form.whose_turn.value = who_goes_now
 	b2 = 1;
     win();
-	drawCheck();
+	draw_check();
     return;
 }
 
@@ -167,10 +167,10 @@ function changeb3(form){
     changing(clicked) ;
     form.b3.value = xo;         
     t = turnchange(t) ;    
-    form.whoseturn.value = whogoesnow
+    form.whose_turn.value = who_goes_now
 	b3 = 1;
     win();
-	drawCheck();
+	draw_check();
     return;   
 }
 
@@ -179,10 +179,10 @@ function changeb4(form){
     changing(clicked) ;
     form.b4.value = xo;    
     t = turnchange(t) ;    
-    form.whoseturn.value = whogoesnow
+    form.whose_turn.value = who_goes_now
 	b4 = 1;
     win();
-	drawCheck();
+	draw_check();
     return;
 }
 
@@ -191,10 +191,10 @@ function changeb5(form){
     changing(clicked) ;
     form.b5.value = xo;    
     t = turnchange(t) ;
-    form.whoseturn.value = whogoesnow
+    form.whose_turn.value = who_goes_now
 	b5 = 1;
     win();
-drawCheck();	
+draw_check();	
     return;
 }
 
@@ -203,10 +203,10 @@ function changeb6(form){
     changing(clicked) ;
     form.b6.value = xo;    
     t = turnchange(t) ;
-    form.whoseturn.value = whogoesnow
+    form.whose_turn.value = who_goes_now
 	b6 = 1;
     win();
-	drawCheck();
+	draw_check();
     return;
 }
 
@@ -215,10 +215,10 @@ function changeb7(form){
     changing(clicked) ;
     form.b7.value = xo;    
     t = turnchange(t) ; 
-    form.whoseturn.value = whogoesnow
+    form.whose_turn.value = who_goes_now
 	b7 = 1;
     win();
-	drawCheck();
+	draw_check();
     return;
 }
 
@@ -227,10 +227,10 @@ function changeb8(form){
     changing(clicked) ;    
     form.b8.value = xo;    
     t = turnchange(t) ;
-    form.whoseturn.value = whogoesnow
+    form.whose_turn.value = who_goes_now
 	b8 = 1;
     win(); 
-drawCheck();	
+draw_check();	
     return;
 }
 
@@ -239,13 +239,13 @@ function changeb9(form){
     changing(clicked) ;
     form.b9.value = xo;    
     t = turnchange(t) ;
-    form.whoseturn.value = whogoesnow
+    form.whose_turn.value = who_goes_now
 	b9 = 1;
     win();
-	drawCheck();
+	draw_check();
     return;
 }
-function drawCheck()
+function draw_check()
 {
   moveCount = b1 + b2 + b3 + b4 + b5 + b6 + b7 + b8 + b9 
   if(moveCount == 9)
@@ -303,18 +303,21 @@ document.getElementById('b9').style.backgroundColor = "brown";
 <div id="left">
 <center>
 <div class="players">
-<input type = "button" name = "whoseturn" value = "player 1">
+<input type = "button" name = "whose_turn" value = "player 1">
 </div>
 
 <div class="tics"> 
 <table>
-<tr><td><input type = "button" name = "b1" id="b1" value = "     "   onClick = changeb1(this.form);bc();>  
+<tr>
+<td><input type = "button" name = "b1" id="b1" value = "     "   onClick = changeb1(this.form);bc();>  
     <td><input type = "button" name = "b2" id="b2" value = "     "	 onClick = changeb2(this.form);bc1();> 
     <td><input type = "button" name = "b3" id="b3" value = "     "  onClick = changeb3(this.form);bc2();> 
-<tr><td><input type = "button" name = "b4" id="b4" value = "     "	onClick = changeb4(this.form);bc3();> 
+<tr>
+<td><input type = "button" name = "b4" id="b4" value = "     "	onClick = changeb4(this.form);bc3();> 
     <td><input type = "button" name = "b5" id="b5" value = "     "	 onClick = changeb5(this.form);bc4();> 
     <td><input type = "button" name = "b6" id="b6" value = "     "	onClick = changeb6(this.form);bc5();> 
-<tr><td><input type = "button" name = "b7" id="b7" value = "     "	onClick = changeb7(this.form);bc6();> 
+<tr>
+<td><input type = "button" name = "b7" id="b7" value = "     "	onClick = changeb7(this.form);bc6();> 
     <td><input type = "button" name = "b8" id="b8" value = "     " onClick = changeb8(this.form);bc7();>   
     <td><input type = "button" name = "b9" id="b9" value = "     "  onClick = changeb9(this.form);bc8();> 
 </table>
