@@ -5,3 +5,7 @@ Tic-tac-toe (also known as noughts and crosses or Xs and Os) is a paper-and-penc
 2)Players alternate placing Xs and Os on the board until either (a) one player has three in a row, horizontally, vertically or diagonally; or (b) all nine squares are filled.
 3)If a player is able to draw three Xs or three Os in a row, that player wins.
 4)If all nine squares are filled and neither player has three in a row, the game is a draw.
+#running the code file:
+Download both the files(index.html and tictac1.css) into any editor .
+Keep the above two files in one folder.
+Naming the .css file must match with the link provided in head of html.
