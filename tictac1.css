@@ -1,0 +1,111 @@
+body{
+	background-color:black;
+}
+
+
+h2{
+	color:#ed391a;
+	font-size:50px;
+	text-align:center;
+}
+
+.players{
+	
+}
+.players input{
+	width:150px;
+	height:40px;
+	font-size:15px;
+	font-weight:bold;
+	color:white;
+	background-color:#1a4bed;
+	border:none;
+}
+.tics{
+	margin-top:10px;
+}
+.tics input{
+	width:95px;
+	height:95px;
+}
+#b1{
+	color:white;
+	font-size:40px;
+	text-align:center;
+}
+#b2{
+	color:white;
+	font-size:40px;
+	text-align:center;
+}
+#b3{
+	color:white;
+	font-size:40px;
+	text-align:center;
+}
+
+#b4{
+	color:white;
+	font-size:40px;
+	text-align:center;
+}
+#b5{
+	color:white;
+	font-size:40px;
+	text-align:center;
+}
+#b6{
+	color:white;
+	font-size:40px;
+	text-align:center;
+}
+#b7{
+	color:white;
+	font-size:40px;
+	text-align:center;
+}
+#b8{
+	color:white;
+	font-size:40px;
+	text-align:center;
+}
+#b9{
+	color:white;
+	font-size:40px;
+	text-align:center;
+}
+.reset{
+	margin-top:20px;
+}
+.reset input{
+	width:150px;
+	height:40px;
+	font-size:15px;
+	font-weight:bold;
+	color:white;
+	background-color:#1a4bed;
+	border:none;
+	cursor:pointer;
+}
+#main{
+	background-color:rgba(148, 180, 232, 0.2);
+	width:100%;
+	margin-top:80px;
+
+}
+#ticbox{
+	margin-left:5%;
+	width:50%;
+	float:left;
+	border-right:1px solid white;
+}
+
+#right{
+	width:35%;
+	height:200px;
+	float:left;
+	background-color:transparent;
+}
+#clear{
+	clear:both;
+}

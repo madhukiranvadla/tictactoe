@@ -1,0 +1,347 @@
+<html>
+<head>
+<title>
+Tic Tac Toe
+</title>
+<link rel="stylesheet" type="text/css" href="tictac1.css">
+
+<SCRIPT name = "JavaScript">
+function variables(){
+    t = 1;
+    change = 1;    
+    empty1 = -1;
+    empty2 = -1;
+    empty3 = -1;
+    empty4 = -1;
+    empty5 = -1;
+    empty6 = -1;
+    empty7 = -1;
+    empty8 = -1;
+    empty9 = -1;
+	b1 = 0;
+	b2 = 0;
+	b3 = 0;
+	b4 = 0;
+	b5 = 0;
+	b6 = 0;
+	b7 = 0;
+	b8 = 0;
+	b9 = 0;
+	
+    return;
+    whogoesnow = "player 1"
+}
+
+function win(){
+  if   (empty1==empty2 && empty2==empty3 && empty3==0 ||
+empty4==empty5 && empty5==empty6 && empty6==0 ||    
+        empty7==empty8 && empty8==empty9 && empty9==0 ||
+        empty1==empty4 && empty4==empty7 && empty7==0 ||
+        empty2==empty5 && empty5==empty8 && empty8==0 ||
+        empty3==empty6 && empty6==empty9 && empty9==0 ||
+        empty1==empty5 && empty5==empty9 && empty9==0 ||
+        empty3==empty5 && empty5==empty7 && empty7==0 ){
+        alert ("player2 wins,congratulation!!!");          
+        history.go(0)  
+  }
+  if   (empty1==empty2 && empty2==empty3 && empty3==1 ||
+empty4==empty5 && empty5==empty6 && empty6==1 ||    
+        empty7==empty8 && empty8==empty9 && empty9==1 ||
+        empty1==empty4 && empty4==empty7 && empty7==1 ||
+        empty2==empty5 && empty5==empty8 && empty8==1 ||
+        empty3==empty6 && empty6==empty9 && empty9==1 ||
+        empty1==empty5 && empty5==empty9 && empty9==1 ||
+        empty3==empty5 && empty5==empty7 && empty7==1 ){
+        alert ("player1 wins,congratulation!!!");
+	history.go(0)
+  }
+}
+
+function turnchange(t){
+  if (change == 1)  {
+    if (t == 0){
+        t = 1;
+        whogoesnow = "player " + 1
+    }
+    else {
+        t = 0;
+	whogoesnow = "player " + 2
+    }
+    
+  }
+  else {
+    t = t;
+  }
+  change = 1  
+  return (t); 
+}
+
+function changing(clicked){
+if (clicked == 1){            
+   spot = empty1 ;}
+if (clicked == 2){
+   spot = empty2 ;}
+if (clicked == 3){
+   spot = empty3 ;}
+if (clicked == 4){
+   spot = empty4 ;}
+if (clicked == 5){
+   spot = empty5 ;}
+if (clicked == 6){
+   spot = empty6 ;}
+if (clicked == 7){
+   spot = empty7 ;}
+if (clicked == 8){
+   spot = empty8 ;}
+if (clicked == 9){
+   spot = empty9 ;}
+
+if (spot == -1){
+   if (t == 0){
+      xo = "o" ;	       	          
+      spot = 0             
+   }
+   else {
+      xo = "X"  ;              
+      spot = 1	     
+   }                              
+   if (clicked == 1){            
+      empty1 = spot;}
+   if (clicked == 2){
+      empty2 = spot ;}
+   if (clicked == 3){
+      empty3 = spot ;}
+   if (clicked == 4){
+      empty4 = spot ;}
+   if (clicked == 5){
+      empty5 = spot ;}
+   if (clicked == 6){
+      empty6 = spot ;}
+   if (clicked == 7){
+      empty7 = spot ;}
+   if (clicked == 8){
+      empty8 = spot ;}
+   if (clicked == 9){
+      empty9 = spot ;}
+} 
+else {
+   if (spot == 0){
+       xo = "o";
+	   }
+   if (spot == 1){
+       xo = "X";
+	   }
+   change = 0
+}
+return (xo) ;
+}
+
+function changeb1(form){	
+    clicked = 1; 
+	
+    changing(clicked) ;     
+    t = turnchange(t) ;  
+    form.b1.value = xo; 
+    form.whoseturn.value = whogoesnow 
+	b1 = 1;
+    win();
+drawCheck();	
+   return;
+}
+function changeb2(form){	
+    clicked = 2;
+	
+    changing(clicked) ;   
+    form.b2.value = xo;    
+    t = turnchange(t) ;
+    form.whoseturn.value = whogoesnow
+	b2 = 1;
+    win();
+	drawCheck();
+    return;
+}
+
+function changeb3(form){	
+    clicked = 3;
+	
+    changing(clicked) ;
+    form.b3.value = xo;         
+    t = turnchange(t) ;    
+    form.whoseturn.value = whogoesnow
+	b3 = 1;
+    win();
+	drawCheck();
+    return;   
+}
+
+function changeb4(form){	
+    clicked = 4;
+    changing(clicked) ;
+    form.b4.value = xo;    
+    t = turnchange(t) ;    
+    form.whoseturn.value = whogoesnow
+	b4 = 1;
+    win();
+	drawCheck();
+    return;
+}
+
+function changeb5(form){	
+    clicked = 5;
+    changing(clicked) ;
+    form.b5.value = xo;    
+    t = turnchange(t) ;
+    form.whoseturn.value = whogoesnow
+	b5 = 1;
+    win();
+drawCheck();	
+    return;
+}
+
+function changeb6(form){	
+    clicked = 6;
+    changing(clicked) ;
+    form.b6.value = xo;    
+    t = turnchange(t) ;
+    form.whoseturn.value = whogoesnow
+	b6 = 1;
+    win();
+	drawCheck();
+    return;
+}
+
+function changeb7(form){	
+    clicked = 7;
+    changing(clicked) ;
+    form.b7.value = xo;    
+    t = turnchange(t) ; 
+    form.whoseturn.value = whogoesnow
+	b7 = 1;
+    win();
+	drawCheck();
+    return;
+}
+
+function changeb8(form){	
+    clicked = 8;
+    changing(clicked) ;    
+    form.b8.value = xo;    
+    t = turnchange(t) ;
+    form.whoseturn.value = whogoesnow
+	b8 = 1;
+    win(); 
+drawCheck();	
+    return;
+}
+
+function changeb9(form){	
+    clicked = 9;
+    changing(clicked) ;
+    form.b9.value = xo;    
+    t = turnchange(t) ;
+    form.whoseturn.value = whogoesnow
+	b9 = 1;
+    win();
+	drawCheck();
+    return;
+}
+function drawCheck()
+{
+  moveCount = b1 + b2 + b3 + b4 + b5 + b6 + b7 + b8 + b9 
+  if(moveCount == 9)
+  {
+    history.go(0)
+    alert("Draw") 
+  }
+}
+</SCRIPT>
+
+
+<SCRIPT name = "JavaScript">
+variables();
+</SCRIPT>
+<script>
+function bc(){
+document.getElementById('b1').style.backgroundColor = "brown";
+}
+function bc1(){
+document.getElementById('b2').style.backgroundColor = "brown";
+}
+function bc2(){
+document.getElementById('b3').style.backgroundColor = "brown";
+}
+function bc3(){
+document.getElementById('b4').style.backgroundColor = "brown";
+}
+function bc4(){
+document.getElementById('b5').style.backgroundColor = "brown";
+}
+function bc5(){
+document.getElementById('b6').style.backgroundColor = "brown";
+}
+function bc6(){
+document.getElementById('b7').style.backgroundColor = "brown";
+}
+function bc7(){
+document.getElementById('b8').style.backgroundColor = "brown";
+}
+function bc8(){
+document.getElementById('b9').style.backgroundColor = "brown";
+}
+
+</script>
+</head>
+<body>
+<div class="whole">
+<div class="title">
+<h2>Tic Tac Toe</h2>
+</div>
+
+<FORM>
+<div id="main">
+<div id="ticbox">
+<div id="left">
+<center>
+<div class="players">
+<input type = "button" name = "whoseturn" value = "player 1">
+</div>
+
+<div class="tics"> 
+<table>
+<tr><td><input type = "button" name = "b1" id="b1" value = "     "   onClick = changeb1(this.form);bc();>  
+    <td><input type = "button" name = "b2" id="b2" value = "     "	 onClick = changeb2(this.form);bc1();> 
+    <td><input type = "button" name = "b3" id="b3" value = "     "  onClick = changeb3(this.form);bc2();> 
+<tr><td><input type = "button" name = "b4" id="b4" value = "     "	onClick = changeb4(this.form);bc3();> 
+    <td><input type = "button" name = "b5" id="b5" value = "     "	 onClick = changeb5(this.form);bc4();> 
+    <td><input type = "button" name = "b6" id="b6" value = "     "	onClick = changeb6(this.form);bc5();> 
+<tr><td><input type = "button" name = "b7" id="b7" value = "     "	onClick = changeb7(this.form);bc6();> 
+    <td><input type = "button" name = "b8" id="b8" value = "     " onClick = changeb8(this.form);bc7();>   
+    <td><input type = "button" name = "b9" id="b9" value = "     "  onClick = changeb9(this.form);bc8();> 
+</table>
+</div>
+<div class="reset">
+<INPUT type="button" value="Play again" id="reset" onClick="history.go(0)">
+</div>
+</div>
+</center>
+</div>
+<div id="right">
+		
+			<ul>
+			<div class="morris" style=" width:100%;height:370px;">
+<marquee  id='scroll_news' width="100%" height="370px" scrollamount="6" direction="up" loop="true">
+<div class="down" onMouseOver="document.getElementById('scroll_news').stop();" onMouseOut="document.getElementById('scroll_news').start();"> 
+			<center> <font  color="white"> *Tic-tac-toe (also known as noughts and crosses or Xs and Os) is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid<br>
+				                                     <br>*The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.<br>
+													 <br>* First player goes first<br><br>* Second player goes second.<br><br>* Keep alternating moves until one of the players has drawn a row of three symbols or until no one can win <br></font></center></div></marquee>
+				
+													 </div>
+			</ul>
+		
+</div>
+<div id="clear"></div>
+</div>
+</FORM>
+</div>
+</body>
+</html>
